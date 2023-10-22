@@ -45,3 +45,13 @@ Memories offers a multi-layered solution:
 1. Database Viewer: Link to Tableland Studio project
 1. Documentation: Link to detailed documentation
 1. Video: Link to video demo
+
+### Misc. Notes
+
+#### scrollSepolia network
+
+- 📝 deployed "MemoriesDataHashRegistry" (tx: 0xc5a3f0dc89e707d51929d102e56b8dd2eb03f49cd7a5cd3e8041d08f4a151d40)...: deployed at 0x27070757df870B10eCE7605c9B7985665393F7De
+
+#### sepolia network
+
+- 📝 deployed "MemoriesDataHashRegistry" (tx: 0x5d23c951d9fb2354a5a8d75278c7930fd960973eb069ba6b071b559787d4fbd9)...: deployed at 0x074b3863DB516B8aAC65f8316130208eeBDb67e7
