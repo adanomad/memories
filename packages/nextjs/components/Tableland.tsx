@@ -3,12 +3,7 @@
 import { useState } from "react";
 import { useSigner } from "../hooks/useSigner";
 import { Database } from "@tableland/sdk";
-
-// Example table schema
-interface TableData {
-  id: number;
-  val: string;
-}
+import { Graduate, data as graduatesData, hash as graduatesHash } from "~~/data/tablelanddb";
 
 // A component with form inputs to to create a table, write data to it, and read data from it
 export function Tableland() {
@@ -19,7 +14,7 @@ export function Tableland() {
   // Form input for the table's value
   const [writeData, setWriteData] = useState<string>("");
   const [readSql, setReadSql] = useState<string>(`SELECT * FROM ${tableName}`);
-  const [data, setData] = useState<TableData[]>([]);
+  const [data, setData] = useState<Graduate[]>(graduatesData);
   // Get the connected signer
   const signer = useSigner();
 
@@ -59,7 +54,7 @@ export function Tableland() {
       console.log(`Read data from table '${tableName}', signer: ${signer}`);
       const db = new Database({ signer });
       if (tableName !== undefined) {
-        const { results } = await db.prepare(readSql).all<TableData>();
+        const { results } = await db.prepare(readSql).all<Graduate>();
         console.log(`Read data from table '${tableName}':`);
         console.log(results);
         setData(results);
@@ -177,7 +172,10 @@ export function Tableland() {
               <thead>
                 <tr>
                   <th className="border p-2">id</th>
-                  <th className="border p-2">val</th>
+                  <th className="border p-2">firstname</th>
+                  <th className="border p-2">lastname</th>
+                  <th className="border p-2">graduation_year</th>
+                  <th className="border p-2">school_name</th>
                 </tr>
               </thead>
               <tbody>
@@ -190,12 +188,21 @@ export function Tableland() {
                   data.map(d => (
                     <tr key={d.id}>
                       <td className="border p-2">{d.id}</td>
-                      <td className="border p-2">{d.val}</td>
+                      <td className="border p-2">{d.firstname}</td>
+                      <td className="border p-2">{d.lastname}</td>
+                      <td className="border p-2">{d.graduation_year}</td>
+                      <td className="border p-2">{d.school_name}</td>
                     </tr>
                   ))
                 )}
               </tbody>
             </table>
+            <h2 className="mt-4 text-lg font-semibold">Data Hash:</h2>
+            <code>{graduatesHash}</code>
+            <p className="font-light text-sm">
+              This hash is computed from the data above and stored on the blockchain. It can be used to quickly verify
+              the integrity of the data in the database, checked against the smart contract.
+            </p>
           </div>
         </div>
       </div>

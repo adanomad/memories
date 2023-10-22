@@ -1714,6 +1714,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@openzeppelin/contracts-upgradeable@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "@openzeppelin/contracts-upgradeable@npm:5.0.0"
+  peerDependencies:
+    "@openzeppelin/contracts": 5.0.0
+  checksum: 4e8a44db153da299d4798fb5cd10aacc537c7fb0fcde099481b92f291f27597db3854b8cc9d2f3916fdeee686944da272852ffdb47a5dca3c93c226e3d96b5e8
+  languageName: node
+  linkType: hard
+
 "@openzeppelin/contracts@npm:4.8.3":
   version: 4.8.3
   resolution: "@openzeppelin/contracts@npm:4.8.3"
@@ -1870,6 +1879,11 @@ __metadata:
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.13"
     "@nomiclabs/hardhat-etherscan": ^3.1.0
     "@openzeppelin/contracts": ^4.8.1
+    "@openzeppelin/contracts-upgradeable": ^5.0.0
+    "@tableland/evm": ^4.3.0
+    "@tableland/hardhat": ^0.0.6
+    "@tableland/local": ^2.0.2
+    "@tableland/sdk": ^4.5.3-dev.0
     "@typechain/ethers-v5": ^10.1.0
     "@typechain/hardhat": ^6.1.3
     "@types/eslint": ^8
@@ -1881,6 +1895,7 @@ __metadata:
     chai: ^4.3.6
     dotenv: ^16.0.3
     envfile: ^6.18.0
+    erc721a-upgradeable: ^4.2.3
     eslint: ^8.26.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
@@ -1904,7 +1919,9 @@ __metadata:
     "@ethersproject/providers": ^5.7.2
     "@heroicons/react": ^2.0.11
     "@rainbow-me/rainbowkit": 1.0.8
+    "@tableland/sdk": ^4.5.3-dev.0
     "@trivago/prettier-plugin-sort-imports": ^4.1.1
+    "@types/json-stable-stringify": ^1
     "@types/node": ^17.0.35
     "@types/react": ^18.0.9
     "@types/react-copy-to-clipboard": ^5.0.4
@@ -1918,6 +1935,7 @@ __metadata:
     eslint-config-next: ^13.1.6
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.2.1
+    json-stable-stringify: ^1.0.2
     next: ^13.1.6
     nextjs-progressbar: ^0.0.16
     postcss: ^8.4.16
@@ -2251,6 +2269,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tableland/hardhat@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "@tableland/hardhat@npm:0.0.6"
+  peerDependencies:
+    "@tableland/local": ^2.0.2
+    hardhat: 2.x
+  checksum: 13fcca7a4f466b534ac441ef9e46c0b3a2167e65c5f6e865e99275b7b26498a78c7d45fca8b8ebc939cc44544c8ae581e88eddfbda95269c985fc863801210d7
+  languageName: node
+  linkType: hard
+
 "@tableland/local@npm:^2.0.2":
   version: 2.0.2
   resolution: "@tableland/local@npm:2.0.2"
@@ -2562,6 +2590,13 @@ __metadata:
   version: 7.0.11
   resolution: "@types/json-schema@npm:7.0.11"
   checksum: 527bddfe62db9012fccd7627794bd4c71beb77601861055d87e3ee464f2217c85fca7a4b56ae677478367bbd248dbde13553312b7d4dbc702a2f2bbf60c4018d
+  languageName: node
+  linkType: hard
+
+"@types/json-stable-stringify@npm:^1":
+  version: 1.0.35
+  resolution: "@types/json-stable-stringify@npm:1.0.35"
+  checksum: e54b9b6a8ecaf6f489a3e670b8d32e8596fff8781ea058a3317f266d5af7f2f8987da26b0dec834cc9bd37932b43f6265758f7310c981e803d7ce05c77231457
   languageName: node
   linkType: hard
 
@@ -6145,6 +6180,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"erc721a-upgradeable@npm:^4.2.3":
+  version: 4.2.3
+  resolution: "erc721a-upgradeable@npm:4.2.3"
+  checksum: 1392111e4ae17cc96613f0cfbe07e003798060e38c955f6f38d747018c81e08498fe483270bb48270bb577da4cad0f3aa79380b253fb39638e89dcb143899d4f
+  languageName: node
+  linkType: hard
+
 "err-code@npm:^2.0.2":
   version: 2.0.3
   resolution: "err-code@npm:2.0.3"
@@ -9098,6 +9140,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json-stable-stringify@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "json-stable-stringify@npm:1.0.2"
+  dependencies:
+    jsonify: ^0.0.1
+  checksum: ec10863493fb728481ed7576551382768a173d5b884758db530def00523b862083a3fd70fee24b39e2f47f5f502e22f9a1489dd66da3535b63bf6241dbfca800
+  languageName: node
+  linkType: hard
+
 "json-stringify-safe@npm:^5.0.1, json-stringify-safe@npm:~5.0.1":
   version: 5.0.1
   resolution: "json-stringify-safe@npm:5.0.1"
@@ -9150,6 +9201,13 @@ __metadata:
     graceful-fs:
       optional: true
   checksum: 7af3b8e1ac8fe7f1eccc6263c6ca14e1966fcbc74b618d3c78a0a2075579487547b94f72b7a1114e844a1e15bb00d440e5d1720bfc4612d790a6f285d5ea8354
+  languageName: node
+  linkType: hard
+
+"jsonify@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "jsonify@npm:0.0.1"
+  checksum: 027287e1c0294fce15f18c0ff990cfc2318e7f01fb76515f784d5cd0784abfec6fc5c2355c3a2f2cb0ad7f4aa2f5b74ebbfe4e80476c35b2d13cabdb572e1134
   languageName: node
   linkType: hard
 
@@ -12125,8 +12183,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "se-2@workspace:."
   dependencies:
-    "@tableland/local": ^2.0.2
-    "@tableland/sdk": ^4.5.3-dev.0
     husky: ^8.0.1
     lint-staged: ^13.0.3
   languageName: unknown
