@@ -2,17 +2,24 @@
 
 ## 🌟 Overview
 
-Memories allows individuals and organizations to create their personalized side chains and subsequently roll-up database hash verifications to the main blockchain. This architecture ensures that while the side chain data's lifecycle remains flexible (modifiable or deletable), the data's integrity remains verifiable on the main chain. The database content itself is secured on the IPFS network via Filecoin, ensuring decentralized, redundant, and verifiable storage.
+Memories is a web3 platform to create your personal side-chain to store verifyable and modifiable data on the blockchain. The database content itself is secured on the IPFS.
 
 ## 🌍 Use Cases
 
-Imagine having an unalterable yet verifiable list of event attendees, or a dynamic database of school graduates whose data can evolve (e.g., updated addresses, professional achievements) while maintaining traceability.
+Imagine graduating from school and you have a list of all your classmates and something that changes, such as their reputation score. You want to store this list on the blockchain so it can be verifiable, but you also want to be able to modify it.
 
 ## ❓ Problem
 
-In many systems, lists or databases (like event attendees or alumni) are neither permanent nor easily verifiable. This lack of transparency and permanence can lead to trust issues and data disputes.
+In many systems, lists or databases (like event attendees or alumni) are neither permanent nor easily verifiable. This lack of transparency and permanence can lead to trust issues and data disputes. We want to know if Jason is a graduate from the class of 2020, but we also want to know if he is a good person by checking his reputation.
 
 ## ✨ Solution
+
+The school can create a database of all the students and their reputation scores. This database can be publicly accessible and verifiable on the blockchain. However, the school can also modify the reputation scores of the students. This is where Memories comes in.
+
+1. Use any SQL database for the data, such as using Tableland decentralized database system.
+1. Modify the data in the database and update the smart contract with new hash.
+1. Quickly check against smart contract the integrity of the data in the database.
+1. Anyone can query for hashes on the blockchain which verifies off-chain database content.
 
 Memories offers a multi-layered solution:
 
