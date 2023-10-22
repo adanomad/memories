@@ -19,6 +19,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@async-generators/from-emitter@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@async-generators/from-emitter@npm:0.3.0"
+  dependencies:
+    "@async-generators/subject": ^0.4
+    "@async-generators/terminator": ^0.4
+  checksum: 026ee763b8d2b20b6f5e312427fac6d2e3f0c9c9313bbd96042973b253b46bede3d397860608e1819fbc7b394ef74be65b6076b8ee6076d7e85b5bc1d28d376b
+  languageName: node
+  linkType: hard
+
+"@async-generators/subject@npm:^0.4":
+  version: 0.4.0
+  resolution: "@async-generators/subject@npm:0.4.0"
+  dependencies:
+    "@async-generators/terminator": ^0.4.0
+    events: ^1.1.1
+  checksum: 67156b4fa697f56749930a7d12d0cbd91d088d7cbac532e37cc62955441783543fd53a2a1e28ee406d75d0736a9f89bc772629d4d563e1a15ca8b5e7c328bc80
+  languageName: node
+  linkType: hard
+
+"@async-generators/terminator@npm:^0.4, @async-generators/terminator@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@async-generators/terminator@npm:0.4.0"
+  checksum: 957f92801a29b1df04ceec12c02dff5661c33d97be30cac17ad06e6aac70f3d36c624ddc4e49231fa493377946204bdd33c232a8c4b40dd91b3aff0b87638d26
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.16.7, @babel/code-frame@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/code-frame@npm:7.18.6"
@@ -622,7 +649,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethersproject/providers@npm:^5.7.2":
+"@ethersproject/providers@npm:5.7.2, @ethersproject/providers@npm:^5.7.2":
   version: 5.7.2
   resolution: "@ethersproject/providers@npm:5.7.2"
   dependencies:
@@ -1687,6 +1714,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@openzeppelin/contracts@npm:4.8.3":
+  version: 4.8.3
+  resolution: "@openzeppelin/contracts@npm:4.8.3"
+  checksum: aea130d38d46840c5cbe3adbaa9a7ac645e4bd66ad3f3baf2fa78588c408d1a686170b3408c9e2e5e05530fba22ecdc00d7efb6b27852a8b29f91accbc0af255
+  languageName: node
+  linkType: hard
+
 "@openzeppelin/contracts@npm:^4.8.1":
   version: 4.8.1
   resolution: "@openzeppelin/contracts@npm:4.8.1"
@@ -2205,6 +2239,70 @@ __metadata:
   dependencies:
     tslib: ^2.4.0
   checksum: 273fd3f3fc461a92f3790cc551ea054745c6d6959afbe1232e6d7aa1c722bbc114d308aab96bef5c78fc0303c85c7b472ef00e2253251cc89737f3b1af56e5a5
+  languageName: node
+  linkType: hard
+
+"@tableland/evm@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "@tableland/evm@npm:4.3.0"
+  dependencies:
+    "@openzeppelin/contracts": 4.8.3
+  checksum: 59c837e88ffde21c1031b2e6262ba69f2e8cdb5682ba966128dbd2c19c57ea1f10f13277556c3b79eb4c29abc4f98343805840abb40073b452cf860a146c76b5
+  languageName: node
+  linkType: hard
+
+"@tableland/local@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@tableland/local@npm:2.0.2"
+  dependencies:
+    "@tableland/sdk": ^4.4.2
+    "@tableland/validator": ^1.8.1
+    cross-spawn: ^7.0.3
+    enquirer: ^2.3.6
+    ethers: ^5.7.2
+    shelljs: ^0.8.5
+    yargs: ^17.5.1
+  bin:
+    local-tableland: dist/esm/up.js
+  checksum: c79c0035a81f6c11fd5f4ecf99f82c71910eb09965828f78728bc312f27d50934ba46bc327b8f8df7dc570661ddf639bbe3c8efd09f510feb1d8f192f15061e1
+  languageName: node
+  linkType: hard
+
+"@tableland/sdk@npm:^4.4.2":
+  version: 4.5.2
+  resolution: "@tableland/sdk@npm:4.5.2"
+  dependencies:
+    "@async-generators/from-emitter": ^0.3.0
+    "@tableland/evm": ^4.3.0
+    "@tableland/sqlparser": ^1.3.0
+    ethers: ^5.7.2
+  checksum: d828bc6f4568f4a2fe6be2a2086cc5d9e9346d6cdd7d0f6fea3e2a00ffe278d3ffc0c81bedd319a2cf2fe3795520b7f559ff6838e616d2037b692adf918c75c0
+  languageName: node
+  linkType: hard
+
+"@tableland/sdk@npm:^4.5.3-dev.0":
+  version: 4.5.3-dev.0
+  resolution: "@tableland/sdk@npm:4.5.3-dev.0"
+  dependencies:
+    "@async-generators/from-emitter": ^0.3.0
+    "@tableland/evm": ^4.3.0
+    "@tableland/sqlparser": ^1.3.0
+    ethers: ^5.7.2
+  checksum: dcacd3c85684813de2e4885ac2541596858a952f369e51c9ad9651ffc27b694a6da15a359abef18392f63cce434bf33fb874c689018af0ae93ae1f68c6f12ea7
+  languageName: node
+  linkType: hard
+
+"@tableland/sqlparser@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@tableland/sqlparser@npm:1.3.0"
+  checksum: a6360687bb37f57b2c5750d2275aa89060e0288bf3a5586d8ccc50f6cbc3d98d678289c570b6b35c41c12898d1acce920f6db1bf120681c2040022289a1fe1a4
+  languageName: node
+  linkType: hard
+
+"@tableland/validator@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "@tableland/validator@npm:1.8.1"
+  checksum: e11171df0dabf9b84003233b911a8ec2f550fba0670bc1dd6593ee646282ede5df6bcdf4ec68730c9f0b53c6eadc234d632d8e70b4310aea9d2c2706ad250fc0
   languageName: node
   linkType: hard
 
@@ -5148,6 +5246,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cliui@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "cliui@npm:8.0.1"
+  dependencies:
+    string-width: ^4.2.0
+    strip-ansi: ^6.0.1
+    wrap-ansi: ^7.0.0
+  checksum: 79648b3b0045f2e285b76fb2e24e207c6db44323581e421c3acbd0e86454cba1b37aea976ab50195a49e7384b871e6dfb2247ad7dec53c02454ac6497394cb56
+  languageName: node
+  linkType: hard
+
 "clsx@npm:1.1.1":
   version: 1.1.1
   resolution: "clsx@npm:1.1.1"
@@ -6989,6 +7098,44 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ethers@npm:^5.7.2":
+  version: 5.7.2
+  resolution: "ethers@npm:5.7.2"
+  dependencies:
+    "@ethersproject/abi": 5.7.0
+    "@ethersproject/abstract-provider": 5.7.0
+    "@ethersproject/abstract-signer": 5.7.0
+    "@ethersproject/address": 5.7.0
+    "@ethersproject/base64": 5.7.0
+    "@ethersproject/basex": 5.7.0
+    "@ethersproject/bignumber": 5.7.0
+    "@ethersproject/bytes": 5.7.0
+    "@ethersproject/constants": 5.7.0
+    "@ethersproject/contracts": 5.7.0
+    "@ethersproject/hash": 5.7.0
+    "@ethersproject/hdnode": 5.7.0
+    "@ethersproject/json-wallets": 5.7.0
+    "@ethersproject/keccak256": 5.7.0
+    "@ethersproject/logger": 5.7.0
+    "@ethersproject/networks": 5.7.1
+    "@ethersproject/pbkdf2": 5.7.0
+    "@ethersproject/properties": 5.7.0
+    "@ethersproject/providers": 5.7.2
+    "@ethersproject/random": 5.7.0
+    "@ethersproject/rlp": 5.7.0
+    "@ethersproject/sha2": 5.7.0
+    "@ethersproject/signing-key": 5.7.0
+    "@ethersproject/solidity": 5.7.0
+    "@ethersproject/strings": 5.7.0
+    "@ethersproject/transactions": 5.7.0
+    "@ethersproject/units": 5.7.0
+    "@ethersproject/wallet": 5.7.0
+    "@ethersproject/web": 5.7.1
+    "@ethersproject/wordlists": 5.7.0
+  checksum: b7c08cf3e257185a7946117dbbf764433b7ba0e77c27298dec6088b3bc871aff711462b0621930c56880ff0a7ceb8b1d3a361ffa259f93377b48e34107f62553
+  languageName: node
+  linkType: hard
+
 "ethjs-unit@npm:0.1.6":
   version: 0.1.6
   resolution: "ethjs-unit@npm:0.1.6"
@@ -7013,6 +7160,13 @@ __metadata:
   version: 4.0.7
   resolution: "eventemitter3@npm:4.0.7"
   checksum: 1875311c42fcfe9c707b2712c32664a245629b42bb0a5a84439762dd0fd637fc54d078155ea83c2af9e0323c9ac13687e03cfba79b03af9f40c89b4960099374
+  languageName: node
+  linkType: hard
+
+"events@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "events@npm:1.1.1"
+  checksum: 40431eb005cc4c57861b93d44c2981a49e7feb99df84cf551baed299ceea4444edf7744733f6a6667e942af687359b1f4a87ec1ec4f21d5127dac48a782039b9
   languageName: node
   linkType: hard
 
@@ -11971,6 +12125,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "se-2@workspace:."
   dependencies:
+    "@tableland/local": ^2.0.2
+    "@tableland/sdk": ^4.5.3-dev.0
     husky: ^8.0.1
     lint-staged: ^13.0.3
   languageName: unknown
@@ -12112,7 +12268,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shelljs@npm:^0.8.3":
+"shelljs@npm:^0.8.3, shelljs@npm:^0.8.5":
   version: 0.8.5
   resolution: "shelljs@npm:0.8.5"
   dependencies:
@@ -14107,6 +14263,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yargs-parser@npm:^21.1.1":
+  version: 21.1.1
+  resolution: "yargs-parser@npm:21.1.1"
+  checksum: ed2d96a616a9e3e1cc7d204c62ecc61f7aaab633dcbfab2c6df50f7f87b393993fe6640d017759fe112d0cb1e0119f2b4150a87305cc873fd90831c6a58ccf1c
+  languageName: node
+  linkType: hard
+
 "yargs-unparser@npm:1.6.0":
   version: 1.6.0
   resolution: "yargs-unparser@npm:1.6.0"
@@ -14179,6 +14342,21 @@ __metadata:
     y18n: ^4.0.0
     yargs-parser: ^18.1.2
   checksum: 40b974f508d8aed28598087720e086ecd32a5fd3e945e95ea4457da04ee9bdb8bdd17fd91acff36dc5b7f0595a735929c514c40c402416bbb87c03f6fb782373
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^17.5.1":
+  version: 17.7.2
+  resolution: "yargs@npm:17.7.2"
+  dependencies:
+    cliui: ^8.0.1
+    escalade: ^3.1.1
+    get-caller-file: ^2.0.5
+    require-directory: ^2.1.1
+    string-width: ^4.2.3
+    y18n: ^5.0.5
+    yargs-parser: ^21.1.1
+  checksum: 73b572e863aa4a8cbef323dd911d79d193b772defd5a51aab0aca2d446655216f5002c42c5306033968193bdbf892a7a4c110b0d77954a7fdf563e653967b56a
   languageName: node
   linkType: hard
 
