@@ -4,13 +4,17 @@ import { Tableland } from "~~/components/Tableland";
 import { ContractData } from "~~/components/example-ui/ContractData";
 import { ContractInteraction } from "~~/components/example-ui/ContractInteraction";
 
-const ExampleUI: NextPage = () => {
+const DataboardUI: NextPage = () => {
   return (
     <>
-      <MetaHeader
-        title="Example UI | Scaffold-ETH 2"
-        description="Example UI created with 🏗 Scaffold-ETH 2, showcasing some of its features."
-      >
+      <div className="text-center mt-8 bg-secondary p-10">
+        <h1 className="text-4xl my-0">Databoard</h1>
+        <p className="text-neutral">
+          Here you can update the data stored on the database, and compute a hash of the data to store on the
+          blockchain.
+        </p>
+      </div>
+      <MetaHeader title="Databoard | Memories" description="Databoard created with 🏗 Memories.">
         {/* We are importing the font this way to lighten the size of SE2. */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet" />
@@ -24,4 +28,4 @@ const ExampleUI: NextPage = () => {
   );
 };
 
-export default ExampleUI;
+export default DataboardUI;
