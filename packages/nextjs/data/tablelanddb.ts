@@ -1,6 +1,3 @@
-import * as crypto from "crypto";
-import stringify from "json-stable-stringify";
-
 export interface Graduate {
   id: number;
   lastname: string;
@@ -81,6 +78,3 @@ export const data: Graduate[] = [
     school_name: "University of Waterloo",
   },
 ];
-
-const serializedData = stringify(data);
-export const hash = crypto.createHash("md5").update(serializedData).digest("hex");

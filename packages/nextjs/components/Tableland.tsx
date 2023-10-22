@@ -3,7 +3,9 @@
 import { useState } from "react";
 import { useSigner } from "../hooks/useSigner";
 import { Database } from "@tableland/sdk";
-import { Graduate, data as graduatesData, hash as graduatesHash } from "~~/data/tablelanddb";
+import * as crypto from "crypto";
+import stringify from "json-stable-stringify";
+import { Graduate, data as graduatesData } from "~~/data/tablelanddb";
 
 // A component with form inputs to to create a table, write data to it, and read data from it
 export function Tableland() {
@@ -15,6 +17,10 @@ export function Tableland() {
   const [writeData, setWriteData] = useState<string>("");
   const [readSql, setReadSql] = useState<string>(`SELECT * FROM ${tableName}`);
   const [data, setData] = useState<Graduate[]>(graduatesData);
+
+  const serializedData = stringify(data);
+  const hash = crypto.createHash("md5").update(serializedData).digest("hex");
+
   // Get the connected signer
   const signer = useSigner();
 
@@ -99,61 +105,14 @@ export function Tableland() {
   // Basic form and tabular view that renders table data
   return (
     <>
-      <div className="p-4">
-        <h2 className="text-xl font-semibold">Table setup & actions</h2>
-        <form className="mt-4 space-y-4">
-          <div className="flex items-center justify-between">
-            <label>
-              <span className="font-medium">Create table</span>
-            </label>
-            <input
-              className="input input-bordered w-full max-w-xs"
-              onChange={handleChange}
-              name="create"
-              placeholder="starter_table"
-              disabled={signer ? false : true}
-            />
-            <button
-              className="btn btn-accent  disabled:bg-gray-300 disabled:cursor-not-allowed"
-              onClick={handleClick}
-              name="create"
-              disabled={signer ? false : true}
-            >
-              Create
-            </button>
-          </div>
-
-          <div className="flex items-center justify-between">
-            <label>
-              <span className="font-medium">Write data</span>
-            </label>
-            <input
-              className="input input-bordered w-full max-w-xs"
-              onChange={handleChange}
-              name="write"
-              placeholder="Bobby Tables"
-              disabled={signer && tableName ? false : true}
-            />
-            <button
-              className="btn btn-accent disabled:cursor-not-allowed"
-              onClick={handleClick}
-              name="write"
-              disabled={signer && tableName ? false : true}
-            >
-              Write
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <div className="p-4">
+      <div className="flex flex-col p-5 space-y-5">
         <h2 className="text-xl font-semibold">Table info</h2>
         <div className="mt-4">
           <div className="flex items-center justify-between">
             <h3 className="font-semibold">
               <input
                 onInput={e => setTableName(e.currentTarget.value)}
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full "
                 value={tableName}
               />
             </h3>
@@ -163,7 +122,7 @@ export function Tableland() {
           </div>
           <input
             onInput={e => setReadSql(e.currentTarget.value)}
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered w-full "
             value={readSql}
           />
           <h2 className="mt-4 text-lg font-semibold">Data:</h2>
@@ -198,13 +157,60 @@ export function Tableland() {
               </tbody>
             </table>
             <h2 className="mt-4 text-lg font-semibold">Data Hash:</h2>
-            <code>{graduatesHash}</code>
+            <code>{hash}</code>
             <p className="font-light text-sm">
               This hash is computed from the data above and stored on the blockchain. It can be used to quickly verify
               the integrity of the data in the database, checked against the smart contract.
             </p>
           </div>
         </div>
+
+        {/* Setup & Actions */}
+
+        <h2 className="text-xl font-semibold">Table setup & actions</h2>
+        <form className="mt-4 space-y-4">
+          {/* <div className="flex items-center justify-between">
+            <label>
+              <span className="font-medium">Create table</span>
+            </label>
+            <input
+              className="input input-bordered w-full "
+              onChange={handleChange}
+              name="create"
+              placeholder="starter_table"
+              disabled={signer ? false : true}
+            />
+            <button
+              className="btn btn-accent  disabled:bg-gray-300 disabled:cursor-not-allowed"
+              onClick={handleClick}
+              name="create"
+              disabled={signer ? false : true}
+            >
+              Create
+            </button>
+          </div> */}
+
+          <div className="flex items-center justify-between">
+            <label>
+              <span className="font-medium">Write data</span>
+            </label>
+            <input
+              className="input input-bordered w-full "
+              onChange={handleChange}
+              name="write"
+              placeholder={writeData}
+              disabled={signer && tableName ? false : true}
+            />
+            <button
+              className="btn btn-accent disabled:cursor-not-allowed"
+              onClick={handleClick}
+              name="write"
+              disabled={signer && tableName ? false : true}
+            >
+              Write
+            </button>
+          </div>
+        </form>
       </div>
     </>
   );
