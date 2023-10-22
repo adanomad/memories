@@ -135,6 +135,7 @@ export function Tableland() {
                   <th className="border p-2">lastname</th>
                   <th className="border p-2">graduation_year</th>
                   <th className="border p-2">school_name</th>
+                  <th className="border p-2">reputation?</th>
                 </tr>
               </thead>
               <tbody>
@@ -151,6 +152,51 @@ export function Tableland() {
                       <td className="border p-2">{d.lastname}</td>
                       <td className="border p-2">{d.graduation_year}</td>
                       <td className="border p-2">{d.school_name}</td>
+                      <td className="border p-2">
+                        <input
+                          value={d.reputation || 50}
+                          onChange={e => {
+                            const newValue = parseInt(e.target.value, 10);
+                            if (newValue >= 0 && newValue <= 100) {
+                              const newData = data.map(entry => {
+                                if (entry.id === d.id) {
+                                  entry.reputation = newValue;
+                                }
+                                return entry;
+                              });
+                              setData(newData);
+                            }
+                          }}
+                        />
+                        <button
+                          onClick={() => {
+                            const newData = data.map(entry => {
+                              if (entry.reputation === undefined) entry.reputation = 50;
+                              if (entry.id === d.id && entry.reputation < 100) {
+                                entry.reputation += 1;
+                              }
+                              return entry;
+                            });
+                            setData(newData);
+                          }}
+                        >
+                          ⬆️
+                        </button>
+                        <button
+                          onClick={() => {
+                            const newData = data.map(entry => {
+                              if (entry.reputation === undefined) entry.reputation = 50;
+                              if (entry.id === d.id && entry.reputation > 0) {
+                                entry.reputation -= 1;
+                              }
+                              return entry;
+                            });
+                            setData(newData);
+                          }}
+                        >
+                          ⬇️
+                        </button>
+                      </td>
                     </tr>
                   ))
                 )}

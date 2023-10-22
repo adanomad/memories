@@ -4,6 +4,7 @@ export interface Graduate {
   firstname: string;
   graduation_year: number;
   school_name: string;
+  reputation?: number;
 }
 
 export const data: Graduate[] = [
@@ -13,6 +14,7 @@ export const data: Graduate[] = [
     lastname: "Smith",
     graduation_year: 2020,
     school_name: "Harvard University",
+    reputation: 85,
   },
   {
     id: 2,
@@ -20,6 +22,7 @@ export const data: Graduate[] = [
     lastname: "Doe",
     graduation_year: 2019,
     school_name: "Stanford University",
+    reputation: 85,
   },
   {
     id: 3,
@@ -27,6 +30,7 @@ export const data: Graduate[] = [
     lastname: "Sun",
     graduation_year: 2015,
     school_name: "University of Waterloo",
+    reputation: 85,
   },
   {
     id: 4,
@@ -34,6 +38,7 @@ export const data: Graduate[] = [
     lastname: "Johnson",
     graduation_year: 2020,
     school_name: "Princeton University",
+    reputation: 85,
   },
   {
     id: 5,
@@ -41,6 +46,7 @@ export const data: Graduate[] = [
     lastname: "Davis",
     graduation_year: 2019,
     school_name: "MIT",
+    reputation: 85,
   },
   {
     id: 6,
@@ -48,6 +54,7 @@ export const data: Graduate[] = [
     lastname: "Miller",
     graduation_year: 2021,
     school_name: "Columbia University",
+    reputation: 85,
   },
   {
     id: 7,
@@ -55,6 +62,7 @@ export const data: Graduate[] = [
     lastname: "Taylor",
     graduation_year: 2012,
     school_name: "University of Waterloo",
+    reputation: 85,
   },
   {
     id: 8,
@@ -62,6 +70,7 @@ export const data: Graduate[] = [
     lastname: "Jones",
     graduation_year: 2020,
     school_name: "University of Pennsylvania",
+    reputation: 85,
   },
   {
     id: 9,
@@ -69,6 +78,7 @@ export const data: Graduate[] = [
     lastname: "Anderson",
     graduation_year: 2021,
     school_name: "Duke University",
+    reputation: 85,
   },
   {
     id: 10,
@@ -76,5 +86,6 @@ export const data: Graduate[] = [
     lastname: "Wilson",
     graduation_year: 2019,
     school_name: "University of Waterloo",
+    reputation: 85,
   },
 ];

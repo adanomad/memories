@@ -1,3 +1,4 @@
+import ContractsUI from "./contracts";
 import type { NextPage } from "next";
 import { MetaHeader } from "~~/components/MetaHeader";
 import { Tableland } from "~~/components/Tableland";
@@ -23,6 +24,7 @@ const DataboardUI: NextPage = () => {
       </div>
       <div className="grid lg:grid-cols-1 flex-grow" data-theme="exampleUi">
         <Tableland />
+        <ContractsUI />
         {/* <ContractInteraction />
         <ContractData /> */}
       </div>

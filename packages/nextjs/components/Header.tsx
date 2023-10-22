@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   Bars3Icon,
-  CubeTransparentIcon,
-  DocumentDuplicateIcon,
+  CubeTransparentIcon, // DocumentDuplicateIcon,
   HomeModernIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
@@ -24,11 +23,11 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/",
     icon: <HomeModernIcon className="h-4 w-4" />,
   },
-  {
-    label: "Smart Contracts",
-    href: "/contracts",
-    icon: <DocumentDuplicateIcon className="h-4 w-4" />,
-  },
+  // {
+  //   label: "Smart Contracts",
+  //   href: "/contracts",
+  //   icon: <DocumentDuplicateIcon className="h-4 w-4" />,
+  // },
   {
     label: "Databoard",
     href: "/databoard",
