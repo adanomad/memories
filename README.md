@@ -50,8 +50,13 @@ Memories offers a multi-layered solution:
 
 #### scrollSepolia network
 
-- 📝 deployed "MemoriesDataHashRegistry" (tx: 0xc5a3f0dc89e707d51929d102e56b8dd2eb03f49cd7a5cd3e8041d08f4a151d40)...: deployed at 0x27070757df870B10eCE7605c9B7985665393F7De
+- 📝 deployed "MemoriesDataHashRegistry" (tx: 0xc5a3f0dc89e707d51929d102e56b8dd2eb03f49cd7a5cd3e8041d08f4a151d40)...: deployed at [0x27070757df870B10eCE7605c9B7985665393F7De](https://sepolia.etherscan.io/address/0x27070757df870b10ece7605c9b7985665393f7de)
+- https://sepolia.scrollscan.dev/address/0x27070757df870b10ece7605c9b7985665393f7de
 
 #### sepolia network
 
-- 📝 deployed "MemoriesDataHashRegistry" (tx: 0x5d23c951d9fb2354a5a8d75278c7930fd960973eb069ba6b071b559787d4fbd9)...: deployed at 0x074b3863DB516B8aAC65f8316130208eeBDb67e7
+- 📝 deployed "MemoriesDataHashRegistry" (tx: 0x5d23c951d9fb2354a5a8d75278c7930fd960973eb069ba6b071b559787d4fbd9)...: deployed at [0x074b3863DB516B8aAC65f8316130208eeBDb67e7](https://sepolia.etherscan.io/address/0x074b3863db516b8aac65f8316130208eebdb67e7)
+
+#### Video demo of Memories smart contract
+
+[![Watch the video](demo/memories.png)](demo/Memories%20Smart%20Contract.webm)
